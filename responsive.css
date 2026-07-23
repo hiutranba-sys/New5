@@ -1,0 +1,143 @@
+:root {
+  --container: min(1120px, calc(100vw - 30px));
+}
+
+@media (max-width: 1100px) {
+  .hero-card { grid-template-columns: minmax(220px, 300px) 1fr; }
+  .about-grid { grid-template-columns: 1fr 1fr; }
+  .music-card { grid-template-columns: 300px 1fr; }
+  .donate-card { grid-template-columns: 240px 1fr; }
+}
+
+@media (max-width: 920px) {
+  .topbar {
+    border-radius: 26px;
+    padding: 12px 12px 12px 16px;
+  }
+  .menu-button { display: inline-grid; place-items: center; }
+  .site-nav {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: min(100%, 340px);
+    display: grid;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 24px;
+    background: rgba(7, 11, 19, .92);
+    border: 1px solid rgba(255,255,255,.10);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(14px);
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 220ms ease, opacity 220ms ease;
+  }
+  .site-nav.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .site-nav a { padding: 14px 16px; background: rgba(255,255,255,.04); }
+  .hero-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-copy {
+    display: grid;
+    justify-items: center;
+  }
+  .hero-copy p { margin-inline: auto; }
+  .hero-points { justify-content: center; }
+  .social-grid { width: 100%; max-width: 620px; }
+  .about-grid,
+  .gallery-grid,
+  .music-card,
+  .donate-card {
+    grid-template-columns: 1fr;
+  }
+  .music-cover-wrap {
+    width: min(100%, 420px);
+    margin-inline: auto;
+  }
+  .music-body,
+  .donate-info { padding: 0; }
+  .donate-qr {
+    width: min(100%, 320px);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  :root { --topbar-h: 74px; --container: min(1120px, calc(100vw - 20px)); }
+  .section { padding: 68px 0; }
+  .hero-section { padding-top: calc(var(--topbar-h) + 60px); }
+  .social-grid { grid-template-columns: 1fr; gap: 12px; }
+  .social-pill { min-height: 88px; }
+  .mini-stats { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .footer { margin-bottom: 94px; }
+}
+
+@media (max-width: 560px) {
+  .topbar { width: calc(100vw - 14px); top: 8px; min-height: 70px; }
+  .brand-copy small { display: none; }
+  .brand-mark { width: 40px; height: 40px; border-radius: 14px; }
+  .site-nav { width: min(100%, calc(100vw - 28px)); }
+  .hero-card { padding: 18px; }
+  .avatar-shell { max-width: 260px; }
+  .hero-copy h1 { font-size: clamp(2rem, 10vw, 3rem); }
+  .section-head h2 { font-size: 1.8rem; }
+  .section-head p { font-size: .96rem; }
+  .info-card, .music-card, .donate-card { padding: 18px; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .music-card { gap: 16px; }
+  .music-body h3 { font-size: 1.42rem; }
+  .play-button { width: 66px; height: 66px; border-radius: 22px; }
+  .icon-button { width: 48px; height: 48px; border-radius: 16px; }
+  .controls { gap: 10px; }
+  .lightbox { padding: 14px; }
+  .lightbox-frame img { max-height: 68vh; border-radius: 20px; }
+  .lightbox-nav { width: 48px; height: 48px; border-radius: 16px; }
+  .lightbox-prev { left: 10px; }
+  .lightbox-next { right: 10px; }
+  .lightbox-close { top: 10px; right: 10px; width: 46px; height: 46px; border-radius: 14px; }
+  .back-to-top { right: 14px; bottom: 14px; }
+}
+
+@media (max-width: 420px) {
+  .hero-points span { width: 100%; text-align: center; }
+  .social-pill { min-height: 84px; }
+  .gallery-label strong { font-size: .96rem; }
+  .gallery-label small { font-size: .82rem; }
+  .copy-button { width: 100%; justify-content: center; }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .gallery-item:hover,
+  .social-pill:hover,
+  .icon-button:hover,
+  .play-button:hover,
+  .copy-button:hover {
+    transform: none;
+  }
+  .starfield { opacity: .72; }
+  .meteors { opacity: .86; }
+  .glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+@supports (padding: max(0px)) {
+  .topbar {
+    top: max(8px, env(safe-area-inset-top));
+  }
+  .back-to-top {
+    right: max(14px, env(safe-area-inset-right));
+    bottom: max(14px, env(safe-area-inset-bottom));
+  }
+  .footer {
+    margin-bottom: calc(94px + env(safe-area-inset-bottom));
+  }
+}

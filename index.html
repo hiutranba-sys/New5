@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#07111d">
+  <meta name="description" content="HieuDev | Trần Bá Hiếu — Student & Developer">
+  <title>HieuDev | Trần Bá Hiếu</title>
+  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#5ca0ff"/><stop offset="100%" stop-color="#7a78ff"/></linearGradient></defs><rect rx="18" ry="18" width="64" height="64" fill="url(%23g)"/><path d="M32 13l5.5 11.5L49 30l-11.5 5.5L32 47l-5.5-11.5L15 30l11.5-5.5L32 13Z" fill="white"/></svg>'>
+  <link rel="preload" href="background.jpg" as="image">
+  <link rel="preload" href="avatar.jpg" as="image">
+  <link rel="preload" href="albums.jpg" as="image">
+  <link rel="preload" href="gallery-1.jpg" as="image">
+  <link rel="preload" href="gallery-2.jpg" as="image">
+  <link rel="preload" href="gallery-3.jpg" as="image">
+  <link rel="preload" href="gallery-4.jpg" as="image">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="icon-spark" viewBox="0 0 24 24"><path d="M12 2l2.2 5.9L20 10.1l-5.8 2.2L12 18l-2.2-5.7L4 10.1l5.8-2.2L12 2Z" fill="currentColor"/></symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M14 8.5h2.2V6H14c-2.2 0-3.7 1.5-3.7 3.9V12H8v2.7h2.3V19H13v-4.3h2.4L16 12H13v-2c0-.9.5-1.5 1-1.5Z" fill="currentColor"/></symbol>
+    <symbol id="icon-tiktok" viewBox="0 0 24 24"><path d="M14 3c.3 1.9 1.5 3.6 3 4.4v2.8c-1.4 0-2.6-.4-3.8-1.1v5.6c0 3-2.3 5.3-5.3 5.3S2.7 17.7 2.7 14.7c0-2.9 2.2-5.2 5-5.3v2.8c-1.2.1-2.2 1.1-2.2 2.4 0 1.3 1 2.4 2.4 2.4 1.5 0 2.5-1 2.5-2.5V3H14Z" fill="currentColor"/><path d="M14 3c.5 2.2 2.1 4 4.4 4.6v2.7c-1.6 0-3.1-.4-4.4-1.1V3Z" fill="currentColor" opacity=".8"/></symbol>
+    <symbol id="icon-telegram" viewBox="0 0 24 24"><path d="M20.7 4.4 4.9 10.6c-1.1.4-1.1 1.9.1 2.3l4 1.4 1.6 4.6c.4 1.1 1.9 1.2 2.4.1l2.1-4.1 4.7 3.5c.8.6 2 .2 2.3-.8L22 6.7c.3-1.6-1.2-2.7-3.3-2.3Z" fill="currentColor"/><path d="M8.5 13.8 18 7.9" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor"/></symbol>
+    <symbol id="icon-pause" viewBox="0 0 24 24"><path d="M7 6h3v12H7zM14 6h3v12h-3z" fill="currentColor"/></symbol>
+    <symbol id="icon-loop" viewBox="0 0 24 24"><path d="M4 7h11a5 5 0 0 1 5 5v1" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M17 6l3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 17H9a5 5 0 0 1-5-5v-1" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M7 18l-3-3 3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+    <symbol id="icon-volume" viewBox="0 0 24 24"><path d="M5 9v6h4l5 4V5L9 9H5Z" fill="currentColor"/><path d="M17 8a4.5 4.5 0 0 1 0 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></symbol>
+    <symbol id="icon-volume-x" viewBox="0 0 24 24"><path d="M5 9v6h4l5 4V5L9 9H5Z" fill="currentColor"/><path d="M16.5 9.5l4 4M20.5 9.5l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24"><path d="M9 9V6.8A1.8 1.8 0 0 1 10.8 5h6.4A1.8 1.8 0 0 1 19 6.8v6.4A1.8 1.8 0 0 1 17.2 15H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><rect x="5" y="9" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2" fill="none"/></symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24"><path d="M12 19V6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M7.5 10.5 12 6l4.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="icon-left" viewBox="0 0 24 24"><path d="M14.5 5.5 8 12l6.5 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+    <symbol id="icon-right" viewBox="0 0 24 24"><path d="M9.5 5.5 16 12l-6.5 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+  </svg>
+
+  <div class="bg-shell">
+    <img class="bg-image" src="background.jpg" alt="" aria-hidden="true">
+    <div class="bg-overlay"></div>
+    <div class="starfield" id="starfield" aria-hidden="true"></div>
+    <div class="meteors" id="meteors" aria-hidden="true"></div>
+    <div class="aurora aurora-main" aria-hidden="true"></div>
+    <div class="aurora aurora-soft" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+  </div>
+
+  <div class="loader" id="loader" aria-label="Đang tải trang">
+    <div class="loader-ring" aria-hidden="true"></div>
+    <div class="loader-copy">
+      <span>HieuDev</span>
+      <small>Loading premium experience…</small>
+    </div>
+  </div>
+
+  <header class="topbar glass" id="topbar">
+    <a class="brand" href="#home" aria-label="HieuDev">
+      <span class="brand-mark"><svg class="ui-icon" aria-hidden="true"><use href="#icon-spark"></use></svg></span>
+      <span class="brand-copy">
+        <strong>HieuDev</strong>
+        <small>Trần Bá Hiếu</small>
+      </span>
+    </a>
+
+    <button class="menu-button" id="menuButton" type="button" aria-label="Mở menu" aria-expanded="false">
+      <svg class="ui-icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
+    </button>
+
+    <nav class="site-nav" id="siteNav" aria-label="Điều hướng chính">
+      <a href="#home">Trang chủ</a>
+      <a href="#about">Giới thiệu</a>
+      <a href="#gallery">Album</a>
+      <a href="#music">Music</a>
+      <a href="#donate">Donate</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="section hero-section">
+      <article class="hero-card glass reveal">
+        <div class="hero-media">
+          <div class="avatar-shell">
+            <img class="avatar" src="avatar.jpg" alt="Trần Bá Hiếu" loading="eager" decoding="async">
+          </div>
+        </div>
+
+        <div class="hero-copy">
+          <span class="eyebrow">Portfolio / Developer</span>
+          <h1 id="heroName">Trần Bá Hiếu</h1>
+          <p id="heroBio">Yêu thích lập trình và thiết kế website.</p>
+
+          <div class="hero-points" aria-label="Điểm nhấn">
+            <span>Modern UI</span>
+            <span>Responsive</span>
+            <span>Premium Glass</span>
+          </div>
+
+          <div class="social-grid" id="socialGrid" aria-label="Mạng xã hội"></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-head reveal">
+        <span class="eyebrow eyebrow-compact">About</span>
+        <h2>Giới thiệu</h2>
+        <p>Một giao diện tối sang, sạch và mượt, tối ưu cho GitHub Pages và điện thoại.</p>
+      </div>
+
+      <div class="about-grid">
+        <article class="info-card glass reveal">
+          <h3>Về mình</h3>
+          <p>Mình là Trần Bá Hiếu, Student & Developer, yêu thích lập trình giao diện, thiết kế website và các trải nghiệm mượt mà, hiện đại.</p>
+          <p class="muted">Mục tiêu của mình là giữ website thật gọn, dễ dùng nhưng vẫn có chất riêng.</p>
+        </article>
+
+        <article class="info-card glass reveal">
+          <h3>Mình làm gì</h3>
+          <ul class="check-list">
+            <li>Thiết kế UI tối giản, cao cấp</li>
+            <li>Responsive trên iPhone và Android</li>
+            <li>Music Player, Gallery, Donate</li>
+            <li>Hiệu ứng nhẹ, không rối và ít lag</li>
+          </ul>
+        </article>
+
+        <article class="info-card glass reveal">
+          <h3>Thông tin</h3>
+          <div class="mini-stats">
+            <div><strong>Facebook</strong><span>HjeuDepZaiii</span></div>
+            <div><strong>TikTok</strong><span>hieudepzaii_63</span></div>
+            <div><strong>Telegram</strong><span>HjeuDepZaii63</span></div>
+            <div><strong>Instagram</strong><span>hjeudepzaiii</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="section-head reveal">
+        <span class="eyebrow eyebrow-compact">Gallery</span>
+        <h2>Album ảnh</h2>
+        <p>4 ảnh được sắp theo layout cân đối, mở ảnh lớn mượt trên cả máy tính và điện thoại.</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <section id="music" class="section">
+      <div class="section-head reveal">
+        <span class="eyebrow eyebrow-compact">Music</span>
+        <h2>Now Playing</h2>
+        <p>Ảnh bài hát vừa khung, không quay, gọn và đẹp hơn cho trải nghiệm premium.</p>
+      </div>
+
+      <article class="music-card glass reveal">
+        <div class="music-cover-wrap">
+          <img id="musicCover" src="albums.jpg" alt="China Pipa x Gong Xi Thazh" loading="lazy" decoding="async">
+        </div>
+
+        <div class="music-body">
+          <span class="music-tag">Now Playing</span>
+          <h3 id="trackTitle">China Pipa x Gong Xi Thazh</h3>
+          <p id="trackArtist">Trần Bá Hiếu</p>
+
+          <div class="time-row">
+            <span id="currentTime">00:00</span>
+            <span id="duration">00:00</span>
+          </div>
+
+          <input id="progress" class="range progress-range" type="range" min="0" max="100" value="0" aria-label="Thanh tiến trình">
+
+          <div class="controls">
+            <button class="icon-button control-button" id="loopBtn" type="button" aria-label="Bật lặp" aria-pressed="false">
+              <svg class="ui-icon" aria-hidden="true"><use href="#icon-loop"></use></svg>
+            </button>
+            <button class="play-button" id="playBtn" type="button" aria-label="Phát nhạc">
+              <svg class="ui-icon play-icon play-icon-play" aria-hidden="true"><use href="#icon-play"></use></svg>
+              <svg class="ui-icon play-icon play-icon-pause" aria-hidden="true"><use href="#icon-pause"></use></svg>
+            </button>
+            <button class="icon-button control-button" id="muteBtn" type="button" aria-label="Tắt tiếng" aria-pressed="false">
+              <svg class="ui-icon ui-icon-volume" aria-hidden="true"><use href="#icon-volume"></use></svg>
+              <svg class="ui-icon ui-icon-volume-x" aria-hidden="true"><use href="#icon-volume-x"></use></svg>
+            </button>
+          </div>
+
+          <label class="volume-row">
+            <svg class="ui-icon" aria-hidden="true"><use href="#icon-volume"></use></svg>
+            <input id="volume" class="range volume-range" type="range" min="0" max="1" step="0.01" value="0.82" aria-label="Âm lượng">
+          </label>
+        </div>
+      </article>
+    </section>
+
+    <section id="donate" class="section">
+      <div class="section-head reveal">
+        <span class="eyebrow eyebrow-compact">Donate</span>
+        <h2>Ủng hộ mình</h2>
+        <p>MB Bank — gọn, sạch và dễ sao chép.</p>
+      </div>
+
+      <div class="donate-card glass reveal">
+        <div class="donate-qr">
+          <img src="qr-bank.jpg" alt="QR MB Bank" loading="lazy" decoding="async">
+        </div>
+
+        <div class="donate-info">
+          <p class="bank-name">MB Bank</p>
+          <p class="bank-account" id="accountNumber">123456789990</p>
+          <p class="bank-owner" id="bankOwner">TRAN BA HIEU</p>
+
+          <button class="copy-button" id="copyAccount" type="button">
+            <svg class="ui-icon" aria-hidden="true"><use href="#icon-copy"></use></svg>
+            <span>Copy số tài khoản</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer glass reveal">
+    <p>© <span id="year"></span> HieuDev. All rights reserved.</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Đóng ảnh">
+      <svg class="ui-icon" aria-hidden="true"><use href="#icon-close"></use></svg>
+    </button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="Ảnh trước">
+      <svg class="ui-icon" aria-hidden="true"><use href="#icon-left"></use></svg>
+    </button>
+    <figure class="lightbox-frame">
+      <img id="lightboxImage" alt="">
+      <figcaption>
+        <span id="lightboxCaption"></span>
+        <small id="lightboxCounter"></small>
+      </figcaption>
+    </figure>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="Ảnh sau">
+      <svg class="ui-icon" aria-hidden="true"><use href="#icon-right"></use></svg>
+    </button>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Lên đầu trang">
+    <svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
+  </button>
+
+  <audio id="audio" preload="metadata"></audio>
+  <script defer src="script.js"></script>
+  <script defer src="effects.js"></script>
+</body>
+</html>
